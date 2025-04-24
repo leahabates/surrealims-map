@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+            <title></title>
+
+        <!--custom stylesheet-->
+        <link rel="stylesheet" href="css/style.css">
+        <!--external stylesheets-->
+        <link rel="stylesheet" href="lib/scrollmap.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Federo&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="content">
+             <!--title block, background image is title image-->
+            <div class="row" style="background-image:url(assets/tittle_image.png); background-size:fit;">
+                <div class="center title">
+                    <!--title text-->
+                    <h1 style="margin-top:396px;">Surrealism Map</h1> 
+                    <!--subtitle or author-->
+                    <p class="author">Made By: Leah Bates</p>
+                </div>
+            </div>
+            <!--text content block-->
+            <div class="row">
+                <div class="center">
+                    <p>For the third lab in GEOG 572, we were tasked with creating a custom tileset using Mapbox. For my tileset, I drew inspiration from a 1930s 
+                        topographical map of Switzerland. I aimed to blend elements of the Surrealism art movement from that era, incorporating larger-than-life and
+                         exaggerated features into the topographical map.
+                    </p>
+                </div>
+            </div>
+            <!--side by side text and image-->
+            <div class="row">
+                <div class="left">
+                    <img class="fit" src="assets/inspiration.png">
+                </div>
+                <div class="right">
+                    <p class="vert-center">The map draws inspiration from the exaggerated nature of the surrealist art style, which seeks to express the unconscious mind
+                         through dream-like imagery. Surrealism is renowned for distorting the real world, and I aim to reflect this through the map's topology. I maintain
+                          a natural color palette, in keeping with the surrealist aesthetic, while incorporating elements of a topographical map, such as contour lines and 
+                          speckled shadows, to enhance contrast. This approach creates a bridge between the flatness of a topographical map and the intense shadows typical 
+                          of surrealism, emulating a sense of realism within the surreal.  </p>
+                </div>
+            </div>
+            <!--description of the icons-->
+            <div class="row">
+                <div class="left">
+                    <img class="fit" src="assets/icon_descp.png">
+                </div>
+                <div class="right">
+                    <p class="vert-center">
+                        I aim to pay homage to Salvador Dalí, one of the most renowned surrealist artists of his time, by incorporating elements from his iconic work 
+                        The Persistence of Memory. The melting clocks serve as symbols for the larger city labels, while Dalí's signature mustache is used to represent 
+                        the smaller cities.
+                    </p>
+                </div>
+            </div>
+            <!--description of the hillshade elements and how to get the exaggerated topology-->
+            <div class="row">
+                <div class="left">
+                    <img class="fit" src="assets/topo_desc.png">
+                </div>
+                <div class="right">
+                    <p class="vert-center">
+                        In considering how to exaggerate a typically flat topographical map, increasing the elevation of the terrain seemed like the most effective approach.
+                         I used Mapbox Terrain DEM to create strong shadows and highlights, ensuring the exaggeration appeared natural. I also created a layer of speckle with the
+                         elements in the hillshade layer to enhance the shadows and emulate the same technique in the Switzerland topographical map I was inspired by.
+                    </p>
+                </div>
+            </div>
+
+            <!--background images with text scrolling over them (sidecar)-->
+            <div class="scroll-container">    
+                <!--background images-->
+                <div class="background-item">
+                    <img src="assets/background1.png" data-slide="1" class="fit">
+                    <img src="assets/background2.png" data-slide="2" class="fit hidden">
+                    <img src="assets/background3.png" data-slide="3" class="fit hidden">
+                    <img src="assets/background4.png" data-slide="4" class="fit hidden">
+                </div>
+                <!--foreground text blocks-->
+                <div class="foreground-item">
+                    <div class="row">
+                        <div class="left background-transparent rounded">
+                            <p class="no-margin">The Himalayas mountain range in Asia look like this, with the exagerated topographical elements.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left background-transparent rounded">
+                            <p class="no-margin">Large cities, like Chicaco Illinois, looks like this.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left background-transparent rounded">
+                            <p class="no-margin">Colorado Springs shows both the topographical elements along with the elements incorporated in the urban land scape.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left background-transparent rounded">
+                            <p class="no-margin">Finally, look at an island to emphasize the blue water that came from the inspiration art. Very blue close to the shower but quickly turning to a 
+                                deep blue.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center-wide">
+                    <p> Map at differnt zoom levels.</p>
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        <!--slideshow content goes here-->
+                        <div class="slide">
+                            <img src="assets/slide1.png">
+                            <p class="caption">A zoomed-out view of the Surrealism style.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/slide2.png">
+                            <p class="caption">A mid-scale view centered on Napal and the Himalaya Moutain range.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/slide3.png">
+                            <p class="caption">A large-scale view of the Moutain range.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/slide4.png">
+                            <p class="caption">The close view of the moutain range showing the hillshade technique used .</p>
+                        </div>
+                        <!-- Next and previous buttons -->
+                        <a class="prev">&#10094;</a>
+                        <a class="next">&#10095;</a>
+
+                        <!-- The dots/circles -->
+                        <div class="slideshow-dots">
+                            <span class="dot" id="1"></span>
+                            <span class="dot" id="2"></span>
+                            <span class="dot" id="3"></span>
+                            <span class="dot" id="4"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center-wide">
+                    <p> See full map here.</p>
+                    <iframe class="fit" src="https://api.mapbox.com/styles/v1/leahabates/cm8rrwk4c002701r2hbfd4w2w.html?title=view&access_token=pk.eyJ1IjoibGVhaGFiYXRlcyIsImEiOiJjbTR3dnp2a2EwaWc1Mmpvb3B6YmJxcGxmIn0.aBgIL7z_bdXrhGOrUgZV6Q&zoomwheel=true&fresh=true#12.55/28.98549/81.87581/0/76"></iframe>
+                </div>
+            </div>
+
+            <!--credits-->
+            <div class="row no-margin">
+                <div class="center">
+                    <div class="credits">
+                        <p><b>Credits:</b></p>
+                        <p>Map created with Mapbox Studio</p>
+                        <p>Data from openstreetmap</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--external scripts-->
+        <script type="text/javascript" src="lib/scrollmap.js"></script>
+    </body>
+</html>
